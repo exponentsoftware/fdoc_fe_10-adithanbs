@@ -1,24 +1,14 @@
-# Day 10
+# Day 8
 
-## Spotify: Playlists
+## Spotify: Route and Search
 
-- Create a playlist data in the `App` component which contains list of songs. User should be able to create multiple playlists
-- Add an option for every song in the `Song` component which provides an option to add it to the selected playlist like below
+From the previous exercise ( Day 7 ) You have created `AddAlbum` component which adds the album in an albums array in the `App` state and `Albums` component which renders the `Album`'s.
+These two components were rendered in the wrapper component called `App`.
+Now lets perform some simple routing for our application.
+The first thing you want to do is add React Router and set up the following RESTful routes.
+1. Create a navigation ( top or side ) which lists two items **Add Album** and **Albums**. When user clicks on any of these nav items redirect to the following routes respectively
+    - `/addalbum` - renders the `AddAlbum` component
+    - `/albums` - renders the `Albums` component
+> Add the functionality same as previous exercise i.e when user add the album from `Add Album` components, the album will be rendered in the `Albums` component
 
-    ![Add to playlist](./images/add_playlist.png)
-
-- Provide an option the nav bar called **Create playlist** which creates a new playlist everytime when use click on it
-- Create a component called Playlist which renders the list of songs you have added to the playlist same as the `Songs` component as shown below. Here you can reuse the same `Songs` component 
-
-    ![My playlist](./images/my_playlist.png)
-
-- When user clicks on playlist name, provide an option to the user to update the playlist with the help of Modal as shown in the picture
-
-    ![update playlist](./images/update_playlist.png)
-
-- Create a component called `Library` which renders all the playlists like shown below
-
-    ![library](./images/library.png)
-
-
-**Note**: Use react router to render the components whereever it is necessary
+2. Create a Search input field in the `Albums` component where user enters any keyword match it with either `album_title` or `artist` and render them in the list
